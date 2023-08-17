@@ -939,176 +939,542 @@ footer {
     }
 }
 
-/* Common styles for both laptop and mobile */
-#what_is_bollywood_text {
-    position: relative;
-    text-align: center;
-}
+/*Media queries*/
 
-/* Decorative rectangles */
-#lightgrey-rect-decor,
-#darkgrey-rect-decor,
-#index-orange-rect,
-#index-green-rect,
-#index-blue-rect {
-    position: relative;
-    width: 100%;
-    z-index: -1;
-}
-
-/* Responsive image styles */
-.responsive-image {
-    position: relative;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-/* Membership styles */
-#membership-text,
-.applications,
-.membership-form {
-    position: relative;
-    text-align: center;
-}
-
-.membership-form {
-    background-color: lightgrey;
-    padding: 5px;
-    font-size: 5vw;
-    transition: margin 1s ease, box-shadow 1s ease;
-    box-shadow: 0px 0px 30px rgb(114, 114, 114);
-}
-
-/* Social icons */
-.social-icons i {
-    font-size: 2rem;
-    color: #fff;
-    padding: .8rem 1rem;
-    opacity: .5;
-    transition: color .5s;
-}
-
-/* Laptop styles */
-@media screen and (min-width: 601px) {
-    #lightgrey-rect-decor {
-        left: 40%;
-        top: 133vh;
-        width: 20%;
-        height: 15vh;
-        background: #e2e2e2;
+@media screen and (min-width: 900px) {
+    .hero {
+        background-position: top;
     }
-
-    #darkgrey-rect-decor {
-        left: 20%;
-        top: 160vh;
-        width: 60%;
-        height: 35vh;
-        background: #8e8e8e;
+    section {
+        /* padding: 7.9rem; */
+        padding-left: 15rem;
+        padding-right: 15rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
-
-    .responsive-image {
+    .menu-toggle {
+        display: none;
+    }
+    .nav {
+        justify-content: space-between;
+    }
+    .nav-list {
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        padding: 0;
+        justify-content: initial;
+        flex-direction: row;
+        transform: initial;
+        transition: initial;
+    }
+    .nav-item {
+        margin: 0 2.4rem;
+        border: none;
+    }
+    .nav-item:last-child {
+        margin-right: 0;
+    }
+    .nav-link {
+        font-size: 1.3rem;
+    }
+    .active {
+        position: relative;
+    }
+    .active::before {
+        content: '';
+        position: absolute;
         width: 100%;
-        max-width: 40%;
-        height: auto;
+        height: 2px;
+        background-color: #fff;
+        left: 0;
+        bottom: -3px;
+    }
+    .events-info {
+        display: flex;
+        align-items: center;
+    }
+    .events-info>div {
+        flex: 1;
+    }
+    .padding-right {
+        padding-right: 5rem;
+    }
+    /* .footer-content{
+        max-width: 77.5rem;
+        margin: auto;
     }
 
-    #holi-fest {
-        left: -3%;
-        top: 5vh;
+    .footer-content-about{
+        max-width: 51.3rem;
+    } */
+    /* .footer-content-divider{
+        display: flex;
+        justify-content: space-between;
+    } */
+    /* .social-media,
+    .newsletter-form{
+        width: 100%;
+        max-width: 27.3rem;
+        margin: 0 1rem;
+    } */
+    .social-icons i {
+        opacity: 1;
     }
+}
 
-    #masala {
-        left: 8%;
-        top: 10vh;
+
+/*Animations*/
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(4rem);
     }
-
-    #holi-girl {
-        left: 1%;
-        top: 3vh;
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
 
-    #diwali {
-        left: 10%;
-        top: 15vh;
+@keyframes scale {
+    0% {
+        transform: scale(2);
     }
-
-    #index-orange-rect {
-        left: 29%;
-        width: 34%;
-        height: 25vh;
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
+}
 
-    #index-green-rect {
-        left: 15%;
-        top: 5vh;
-        width: 40%;
-        height: 33vh;
+@keyframes grow {
+    0% {
+        width: 0;
     }
-
-    #index-blue-rect {
-        left: 65%;
-        top: -17vh;
-        width: 33%;
-        height: 13vh;
+    100% {
+        opacity: 1;
+        width: 100%;
     }
+}
 
-    #seniors-dance-pic {
-        top: -70vh;
-        left: 8%;
+@keyframes fadeDown {
+    0% {
+        transform: translateY(-1rem);
     }
-
-    #pumpkin-carving-pic {
-        left: 20%;
-        top: -77vh;
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
 
-    #soph-dance-pic {
-        left: 50%;
-        top: -75vh;
+@keyframes up {
+    0% {
+        opacity: 0;
     }
-
-    #freshmen-mixer {
-        left: 10%;
-        top: -90vh;
+    50% {
+        opacity: 1;
     }
-
-    #big-little-pic {
-        left: 10%;
-        top: -43vh;
-        transform: rotate(90deg);
+    100% {
+        opacity: 0;
+        transform: translateY(-1rem);
     }
+}
 
-    .applications {
-        left: 12%;
-        top: 350vh;
-        font-size: 2vw;
+@media screen and (min-width: 600px) {
+    /* Index Page */
+    #what_is_bollywood_text {
+        position: absolute;
+        left: 62vw;
+        top: 130vh;
+        right: 10vw;
+        text-align: center;
+        backdrop-filter: blur(8px);
+        z-index: 0;
+        color: black;
     }
-
-    .membership-form {
-        left: 20%;
-        top: 360vh;
-        width: 60%;
+    #what-is-bollywood-title {
+        opacity: 0;
+        animation: fadeUp .5s forwards;
+        animation-delay: 0.5s;
         font-size: 2.5vw;
     }
-
-    /* Adjust other styles as needed */
-}
-
-/* Mobile styles */
-@media screen and (max-width: 600px) {
-    #lightgrey-rect-decor,
-    #darkgrey-rect-decor,
-    #index-orange-rect,
-    #index-green-rect,
+    .what-is-bollywood-intro {
+        position: relative;
+        padding-top: 20px;
+        line-height: 3rem;
+        text-align: center;
+        font-size: 1.3vw;
+    }
+    
+    #holi-fest {
+        position: absolute;
+        left: 8vw;
+        top: 110vh;
+        width: 32vw;
+        height: 35vh;
+        object-fit: cover;
+    }
+    #holi-girl {
+        position: absolute;
+        left: 10vw;
+        top: 160vh;
+        width: 16vw;
+        height: 36vh;
+        object-fit: cover;
+    }
+    #masala {
+        position: absolute;
+        left: 44vw;
+        top: 118vh;
+        width: 14vw;
+        height: 28vh;
+        object-fit: cover;
+    }
+    #diwali {
+        position: absolute;
+        left: 32vw;
+        top: 157vh;
+        width: 27vw;
+        height: 30vh;
+        object-fit: cover;
+    }
+    #index-orange-rect {
+        position: absolute;
+        left: 59vw;
+        top: 233vh;
+        width: 14vw;
+        height: 25vh;
+        background: #fbdeb2;
+    }
+    #index-green-rect {
+        position: absolute;
+        left: 50vw;
+        top: 264vh;
+        width: 14vw;
+        height: 33vh;
+        background: #b2fbc5;
+        z-index: -1;
+    }
     #index-blue-rect {
-        top: auto;
+        position: absolute;
+        left: 83vw;
+        top: 267vh;
+        width: 13vh;
+        height: 13vh;
+        background: #d0e9fa;
+        z-index: 1;
+    }
+    #seniors-dance-pic {
+        position: absolute;
+        left: 32vw;
+        top: 216vh;
+        width: 30vw;
+        height: 27vh;
+        object-fit: cover;
+    }
+    #pumpkin-carving-pic {
+        position: absolute;
+        left: 72vw;
+        top: 219vh;
+        width: 25vw;
+        height: 30vh;
+        object-fit: cover;
+        z-index: -1;
+    }
+    #soph-dance-pic {
+        position: absolute;
+        left: 62vw;
+        top: 248vh;
+        width: 24vw;
+        height: 25vh;
+        object-fit: cover;
+    }
+    #big-little-pic {
+        position: absolute;
+        rotate: 90;
+        left: 47vw;
+        top: 272vh;
+        width: 13vw;
+        height: 20vw;
+        object-fit: cover;
+        
+    }
+    #freshmen-mixer {
+        position: absolute;
+        left: 70vw;
+        top: 277vh;
+        width: 25vw;
+        height: 35vh;
+        object-fit: cover;
+    }
+    #become-a-member-today {
+        font-size: 2.0vw;
+        margin-bottom: 10px;
+    }
+    #membership-text {
+        position: absolute;
+        left: 8vw;
+        top: 238vh;
+        right: 55vw;
+        background-color: #f1f9ff;
+        padding: 3vw;
+        font-size: 1.2vw;
+        z-index: -1;
+        text-align: center;
+    }
+    .index-page-footer {
+        position: absolute;
+        top: 350vh;
+        width: 100%;
+    }
+    /* .application-section {
+    position: absolute;
+    left: 30vw;
+    top: 320vh;
+    width: 40vw;
+    font-size: 1.5rem;
+    padding: 5px;
+    text-align: center;
     }
 
-    .responsive-image {
-        max-width: 100%;
+    .application-section a {
+        padding: 5px;
+        background-color: lightgrey;
+    } */
+
+    .applications {
+        position: absolute;
+        left: 25vw;
+        top: 320vh;
+        width: 50vw;
+        font-size: 2.5rem;
+        padding: 5px;
+        text-align: center;
     }
 
-    /* Adjust other styles as needed */
+
+    .membership-form {
+        position: absolute;
+        left: 30vw;
+        top: 330vh;
+        width: 40vw;
+        font-size: 2rem;
+        padding: 5px;
+        background-color: lightgrey;
+        text-align: center;
+    }
+
+    .membership-form:hover{
+        transition: margin 1s ease, box-shadow 1s ease;
+        box-shadow: 0px 0px 30px rgb(114, 114, 114); 
+    }
+
+    .big-little-form {
+        position: absolute;
+        left: 30vw;
+        top: 335vh;
+        width: 40vw;
+        font-size: 1.5rem;
+        padding: 5px;
+        background-color: lightgrey;
+        text-align: center;
+    }
+
+    .freshman-liaison-form {
+        position: absolute;
+        left: 30vw;
+        top: 340vh;
+        width: 40vw;
+        font-size: 1.5rem;
+        padding: 5px;
+        background-color: lightgrey;
+        text-align: center;
+    }
 }
 
+@media screen and (max-width: 600px) {
+    #what_is_bollywood_text {
+        position: relative;
+        top: -3vh;
+        text-align: center;
+    }
+    #lightgrey-rect-decor {
+        position: absolute;
+        left: 40vw;
+        top: 133vh;
+        width: 30vw;
+        height: 15vh;
+        background: #e2e2e2;
+        z-index: -1;
+    }
+    #darkgrey-rect-decor {
+        position: absolute;
+        top: 160vh;
+        left: 30vw;
+        width: 60vw;
+        height: 35vh;
+        background: #8e8e8e;
+        z-index: -1;
+    }
+    #holi-fest {
+        position: relative;
+        left: -3vw;
+        top: 5vh;
+        width: 40vw;
+        height: 35vh;
+        object-fit: cover;
+    }
+    #masala {
+        position: relative;
+        left: 8vw;
+        top: 10vh;
+        width: 35vw;
+        height: 28vh;
+        object-fit: cover;
+    }
+    #holi-girl {
+        position: relative;
+        left: 1vw;
+        top: 3vh;
+        width: 35vw;
+        height: 30vh;
+        object-fit: cover;
+    }
+    #diwali {
+        position: relative;
+        left: 10vw;
+        top: 15vh;
+        width: 40vw;
+        height: 36vh;
+        object-fit: cover;
+    }
+    #become-a-member-today {
+        position: relative;
+        font-size: 5vw;
+        text-align: center;
+    }
+    #membership-text {
+        position: relative;
+        top: -5vh;
+        margin: 2.4rem;
+        text-align: center;
+    }
+    #index-orange-rect {
+        position: relative;
+        left: 29vw;
+        width: 34vw;
+        height: 25vh;
+        background: #fbdeb2;
+    }
+    #index-green-rect {
+        position: relative;
+        left: 15vw;
+        top: 5vh;
+        width: 40vw;
+        height: 33vh;
+        background: #b2fbc5;
+        z-index: -1;
+    }
+    #index-blue-rect {
+        position: relative;
+        left: 65vw;
+        top: -17vh;
+        width: 33vw;
+        height: 13vh;
+        background: #d0e9fa;
+        z-index: -1;
+    }
+    #seniors-dance-pic {
+        position: relative;
+        top: -70vh;
+        left: 8vw;
+        width: 38vw;
+        height: 20vh;
+        object-fit: cover;
+    }
+    #pumpkin-carving-pic {
+        position: relative;
+        left: 20vw;
+        top: -77vh;
+        width: 34vw;
+        height: 25vh;
+        object-fit: cover;
+        z-index: 0;
+    }
+    #soph-dance-pic {
+        position: relative;
+        left: 50vw;
+        top: -75vh;
+        width: 44vw;
+        height: 20vh;
+        object-fit: cover;
+    }
+    #freshmen-mixer {
+        position: relative;
+        left: 10vw;
+        top: -90vh;
+        width: 33vw;
+        height: 27vh;
+        object-fit: cover;
+    }
+    #big-little-pic {
+        position: relative;
+        left: 10vw;
+        top: -43vh;
+        width: 34vw;
+        height: 25vh;
+        object-fit: cover;
+        transform: rotate(90deg);
+    }
+    .applications{
+        position: absolute;
+        left: 12vw;
+        top: 350vh;
+        /* width: 40vw; */
+        font-size: 8vw;
+        /* padding: 5px; */
+        text-align: center;
+    }
+    
+    .membership-form {
+        position: absolute;
+        left: 20vw;
+        top: 360vh;
+        width: 60vw;
+        font-size: 5vw;
+        padding: 5px;
+        background-color: lightgrey;
+        text-align: center;
+    }
+    
+    .membership-form:hover{
+        transition: margin 1s ease, box-shadow 1s ease;
+        box-shadow: 0px 0px 30px rgb(114, 114, 114); 
+    }
+
+    .social-icons i {
+        font-size: 2rem;
+        color: #fff;
+        padding: .8rem 1rem;
+        opacity: .5;
+        transition: color .5s;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .first-letter{
+        font-size: 5rem;
+    }
+    .welcome-sub-headline{
+        font-size: 5rem;
+    }
+
+    .applications{
+        position: absolute;
+        top: 380vh;
+    }
+    .membership-form{
+        position: absolute;
+        top: 390vh;
+    }
+}

@@ -1080,9 +1080,150 @@ footer {
     }
 }
 
+/*Media queries*/
+
+@media screen and (min-width: 900px) {
+    .hero {
+        background-position: top;
+    }
+    section {
+        /* padding: 7.9rem; */
+        padding-left: 15rem;
+        padding-right: 15rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .menu-toggle {
+        display: none;
+    }
+    .nav {
+        justify-content: space-between;
+    }
+    .nav-list {
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        padding: 0;
+        justify-content: initial;
+        flex-direction: row;
+        transform: initial;
+        transition: initial;
+    }
+    .nav-item {
+        margin: 0 2.4rem;
+        border: none;
+    }
+    .nav-item:last-child {
+        margin-right: 0;
+    }
+    .nav-link {
+        font-size: 1.3rem;
+    }
+    .active {
+        position: relative;
+    }
+    .active::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        left: 0;
+        bottom: -3px;
+    }
+    .events-info {
+        display: flex;
+        align-items: center;
+    }
+    .events-info>div {
+        flex: 1;
+    }
+    .padding-right {
+        padding-right: 5rem;
+    }
+    /* .footer-content{
+        max-width: 77.5rem;
+        margin: auto;
+    }
+
+    .footer-content-about{
+        max-width: 51.3rem;
+    } */
+    /* .footer-content-divider{
+        display: flex;
+        justify-content: space-between;
+    } */
+    /* .social-media,
+    .newsletter-form{
+        width: 100%;
+        max-width: 27.3rem;
+        margin: 0 1rem;
+    } */
+    .social-icons i {
+        opacity: 1;
+    }
+}
+
+
+/*Animations*/
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(4rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes grow {
+    0% {
+        width: 0;
+    }
+    100% {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        transform: translateY(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes up {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+}
+
 @media screen and (min-width: 600px) {
     /* Index Page */
-    #what_is_bollywood_text {
+    #what_is_sia_text {
         position: absolute;
         left: 62vw;
         top: 130vh;
@@ -1092,20 +1233,37 @@ footer {
         z-index: 0;
         color: black;
     }
-    #what-is-bollywood-title {
+    #what-is-sia-title {
         opacity: 0;
         animation: fadeUp .5s forwards;
         animation-delay: 0.5s;
         font-size: 2.5vw;
     }
-    .what-is-bollywood-intro {
+    .what-is-sia-intro {
         position: relative;
         padding-top: 20px;
         line-height: 3rem;
         text-align: center;
         font-size: 1.3vw;
     }
-    
+    #darkgrey-rect-decor {
+        position: absolute;
+        left: 30vw;
+        top: 150vh;
+        width: 60vw;
+        height: 35vh;
+        background: #8e8e8e;
+        z-index: -1;
+    }
+    #lightgrey-rect-decor {
+        position: absolute;
+        left: 15vw;
+        top: 131vh;
+        width: 40vw;
+        height: 45vh;
+        background: #f2f2f2;
+        z-index: -1;
+    }
     #holi-fest {
         position: absolute;
         left: 8vw;
@@ -1168,16 +1326,16 @@ footer {
         position: absolute;
         left: 32vw;
         top: 216vh;
-        width: 30vw;
-        height: 27vh;
+        width: 28vw;
+        height: 20vh;
         object-fit: cover;
     }
     #pumpkin-carving-pic {
         position: absolute;
         left: 72vw;
         top: 219vh;
-        width: 25vw;
-        height: 30vh;
+        width: 14vw;
+        height: 25vh;
         object-fit: cover;
         z-index: -1;
     }
@@ -1192,19 +1350,19 @@ footer {
     #big-little-pic {
         position: absolute;
         rotate: 90;
-        left: 47vw;
-        top: 272vh;
+        left: 42vw;
+        top: 282vh;
         width: 13vw;
         height: 20vw;
         object-fit: cover;
-        
+        transform: rotate(90deg);
     }
     #freshmen-mixer {
         position: absolute;
         left: 70vw;
         top: 277vh;
-        width: 25vw;
-        height: 35vh;
+        width: 14vw;
+        height: 25vh;
         object-fit: cover;
     }
     #become-a-member-today {
@@ -1293,7 +1451,7 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-    #what_is_bollywood_text {
+    #what_is_sia_text {
         position: relative;
         top: -3vh;
         text-align: center;

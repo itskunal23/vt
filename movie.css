@@ -1,0 +1,81 @@
+
+/* Chat styles */
+.chat {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+/* Messages styles */
+.messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+/* User profile image */
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    align-self: flex-end;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for user profile image */
+}
+
+/* Bot profile image */
+.bot-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    align-self: flex-start;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for bot profile image */
+}
+
+/* User message styles */
+.user-message {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    max-width: 70%;
+    background-color: #007AFF; /* User message background color */
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Bot message styles */
+.bot-message {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    max-width: 70%;
+    background-color: #E5E5EA; /* Bot message background color */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Input styles */
+#input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: white; /* Input background color */
+}
+/* Bot profile image */
+.bot-profile.right {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 0; /* Change margin-right value to 0 */
+    align-self: flex-end;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for bot profile image */
+}

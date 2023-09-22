@@ -193,17 +193,16 @@ header {
 .hero {
     width: 100%;
     height: 100vh;
-    background: url("images/studenttt.jpg") center no-repeat;
+    background: url("images/studentwallpaper.jpg") center no-repeat;
     background-size: cover;
     display: flex;
     align-items: flex-end;
-    
 }
 
 .event-hero {
     width: 100%;
     height: 80vh;
-    background: url("images/gobbler.jpg") center no-repeat;
+    background: url("images/gobblerfestpic.jpg") center no-repeat;
     background-size: cover;
     background-position: top left;
     display: flex;
@@ -230,7 +229,7 @@ header {
     color: #fefefe;
     text-align: center;
     padding: 7vh 5vw 0 3vw;
-    width: 500px;
+    width: 700px;
 
     /* Add a black background box */
     background-color: black;
@@ -583,6 +582,8 @@ footer {
         text-align: center;
         font-size: 1.3vw;
     }
+
+    
     
     #holi-fest {
         position: absolute;
@@ -700,6 +701,7 @@ footer {
         z-index: -1;
         text-align: center;
     }
+    
     .index-page-footer {
         position: absolute;
         top: 350vh;
@@ -836,6 +838,7 @@ footer {
         top: -5vh;
         margin: 2.4rem;
         text-align: center;
+    
     }
     #index-orange-rect {
         position: relative;
@@ -1082,7 +1085,7 @@ footer {
 
 @media screen and (min-width: 600px) {
     /* Index Page */
-    #what_is_sia_text {
+    #what_is_bollywood_text {
         position: absolute;
         left: 62vw;
         top: 130vh;
@@ -1092,13 +1095,13 @@ footer {
         z-index: 0;
         color: black;
     }
-    #what-is-sia-title {
+    #what-is-bollywood-title {
         opacity: 0;
         animation: fadeUp .5s forwards;
         animation-delay: 0.5s;
         font-size: 2.5vw;
     }
-    .what-is-sia-intro {
+    .what-is-bollywood-intro {
         position: relative;
         padding-top: 20px;
         line-height: 3rem;
@@ -1495,3 +1498,67 @@ footer {
         top: 390vh;
     }
 }
+/* Reset some default styles for consistency */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the iPhone container */
+.iphone {
+    width: 375px; /* iPhone 6/7/8 width */
+    height: 667px; /* iPhone 6/7/8 height */
+    background: #000;
+    border-radius: 10px; /* Reduced border-radius to make it more like an iPhone */
+    position: relative; /* Change this to "relative" or "fixed" as needed */
+    top: 100; /* Adjust the top position as needed */
+    right: 0; /* Adjust the right position as needed */
+    /* You can also use "left" and "bottom" to position it differently */
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transform: scale(0.7); /* Adjust the scale factor to resize the iPhone */
+    transform-origin: bottom right; /* Adjust the transform origin to scale from the top right corner */
+}
+
+
+/* Style the screen */
+.screen {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 30px;
+    position: relative;
+}
+
+/* Center the image inside the screen */
+.screen img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Styles for the membership text container */
+.membership-container {
+    float: left; /* Float the membership text container to the left */
+    width: 50%; /* Adjust the width as needed */
+}
+
+/* Styles for the iPhone container */
+.iphone-container {
+    float: right; /* Float the iPhone container to the right */
+    width: 50%; /* Adjust the width as needed */
+}
+
+.iphone-container {
+    position: absolute;
+    right: 100px;
+    top: 1200px;
+  }
+
+/* Add additional styles for the membership text and iPhone interface as needed */
+
+
